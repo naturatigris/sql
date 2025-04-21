@@ -1,0 +1,23 @@
+1. CREATE TABLE Orders (...) 
+   - Creates a table called Orders with columns for order details such as customer, product, quantity, price, and region.
+
+2. INSERT INTO Orders (...) VALUES (...) 
+   - Inserts 10 rows of sample order data across different regions and products.
+
+3. SELECT COUNT(*) FROM Orders;
+   - Returns the total number of orders in the Orders table.
+
+4. SELECT SUM(Quantity) FROM Orders;
+   - Calculates the total quantity of all products ordered.
+
+5. SELECT AVG(PricePerUnit) FROM Orders;
+   - Computes the average price per unit for all products.
+
+6. SELECT Region, COUNT(*) AS TotalOrders FROM Orders GROUP BY Region;
+   - Groups orders by region and shows the number of orders in each region.
+
+7. SELECT Product, SUM(Quantity) AS TotalQuantity FROM Orders GROUP BY Product;
+   - Groups records by product and calculates the total quantity sold for each product.
+
+8. SELECT Region, SUM(Quantity) AS TotalQuantity FROM Orders GROUP BY Region HAVING SUM(Quantity) > 10;
+   - Filters grouped results to show only those regions where total quantity ordered is greater than 10.

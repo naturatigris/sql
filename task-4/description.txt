@@ -1,0 +1,4 @@
+- Created two tables: Customers and Orders with a foreign key relationship on CustomerID.
+- Inserted sample data where some customers have orders and some do not.
+- INNER JOIN shows only customers with matching orders.
+- LEFT JOIN shows all customers, including those without orders (NULLs in order columns).
