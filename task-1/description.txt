@@ -1,0 +1,13 @@
+1. CREATE TABLE Products (...);
+   - This command creates a new table named "Products" with the following columns:
+     • ProductID: Primary Key (unique identifier).
+     • ProductName: string.
+     • Category: string with 50 characters.
+     • Price: A decimal number .
+     • Stock: An integer representing available stock.
+
+2. INSERT INTO Products (...) VALUES (...);
+   - This command inserts multiple rows into the Products table.
+
+3. SELECT * FROM Products;
+   - This query selects and displays all columns and all rows from the Products table.

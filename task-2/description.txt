@@ -1,0 +1,20 @@
+1. SELECT * FROM Products WHERE Category = 'Electronics';
+   - Filters and shows only products in the "Electronics" category.
+
+2. SELECT * FROM Products WHERE Price > 500;
+   - Shows all products with a price greater than 500.
+
+3. SELECT * FROM Products WHERE Category = 'Electronics' AND Stock < 100;
+   - Filters products that are both in "Electronics" and have stock less than 100.
+
+4. SELECT * FROM Products WHERE Category = 'Stationery' OR Category = 'Accessories';
+   - Retrieves products that belong to either the "Stationery" or "Accessories" category.
+
+5. SELECT * FROM Products ORDER BY Price ASC;
+   - Displays all products sorted by price in ascending (low to high) order.
+
+6. SELECT * FROM Products ORDER BY Stock DESC;
+   - Displays all products sorted by stock in descending (high to low) order.
+
+7. SELECT * FROM Products WHERE Category = 'Electronics' AND Price > 1000 ORDER BY ProductName;
+   - Shows Electronics products with price above 1000 and sorts them alphabetically by product name.
