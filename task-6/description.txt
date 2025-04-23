@@ -1,0 +1,4 @@
+- Created an Orders table with order date and amount fields.
+- First query selects orders placed within the last 30 days using DATEADD and GETDATE.
+- Second query calculates how many days ago each order was placed using DATEDIFF.
+- Third query formats OrderDate into DD/MM/YYYY format using CONVERT.

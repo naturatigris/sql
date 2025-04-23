@@ -1,0 +1,4 @@
+- Created an Employees table with sample salary data across departments.
+- First query filters employees whose salary is above IT department’s average (non-correlated subquery).
+- Second query shows each employee with the company’s average salary in a dynamic column (scalar subquery).
+- Third query compares each employee’s salary to their own department’s average (correlated subquery).

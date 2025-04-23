@@ -18,3 +18,4 @@
 
 7. SELECT * FROM Products WHERE Category = 'Electronics' AND Price > 1000 ORDER BY ProductName;
    - Shows Electronics products with price above 1000 and sorts them alphabetically by product name.
+  
