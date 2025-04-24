@@ -1,0 +1,4 @@
+- Created a stored procedure `GetTotalSales` that takes a date range and returns total sales between those dates.
+- Created a scalar function `CalculateDiscount` that returns a 10% discount if the amount is above 1000.
+- Used `CALL` to run the procedure and `SELECT` to test the function on order amounts.
+- Demonstrates encapsulating business logic into reusable SQL code units.
