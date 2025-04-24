@@ -1,6 +1,3 @@
-- Created an Employees table with sample employee data including department and salary.
-- First query ranks employees within each department by descending salary using the RANK() window function and PARTITION BY Department.
-- Second query uses LAG() and LEAD() functions:
-   - LAG() fetches the previous employee’s salary (within the same department, ordered by salary).
-   - LEAD() fetches the next employee’s salary (within the same department, ordered by salary).
-- These functions help in analyzing salary progression within departments.
+- Non-recursive CTE (DeptAvg): Simplifies a multi-step query by first calculating average salaries by department, then filters departments with average > 60000.
+- Recursive CTE (OrgHierarchy): Traverses hierarchical employee-manager relationships starting from the top (CEO), using UNION ALL with a self-join.
+- The recursive CTE builds levels in the hierarchy and stops when no more child records are found (avoiding infinite loops).
