@@ -1,0 +1,54 @@
+
+DATABASE DOCUMENTATION
+
+1. CREATE TABLE Customers
+- Creates Customers table to store customer info with unique Email and auto-increment CustomerID.
+
+2. CREATE TABLE Products
+- Creates Products table for product details. Enforces QuantityInStock >= 0 using CHECK constraint.
+
+3. CREATE TABLE Orders
+- Creates Orders table linking customers with their orders. CustomerID is a foreign key.
+
+4. CREATE TABLE OrderDetails
+- Creates OrderDetails table to record ordered products, quantity, and price, linked to Orders and Products.
+
+5. CREATE TABLE OrderLogs
+- Creates OrderLogs table to log changes (order placed, etc.) with timestamp and foreign key to Orders.
+
+6. INSERT INTO Customers
+- Inserts sample customers for testing.
+
+7. INSERT INTO Products
+- Inserts sample products for testing.
+
+8. CREATE INDEX customer_index ON Customers(CustomerID)
+- Adds an index on CustomerID to speed up queries filtering by customer.
+
+9. CREATE TRIGGER pdate_change
+- After inserting into OrderDetails, it:
+  a) Decreases product stock,
+  b) Updates order status to 'Order Placed',
+  c) Inserts into OrderLogs.
+
+10. START TRANSACTION ... COMMIT
+- Ensures inserting into Orders and OrderDetails happens together atomically (no partial save).
+
+11. SET @last_order_id = LAST_INSERT_ID();
+- Captures last inserted OrderID to use in next insertion.
+
+12. CREATE VIEW OrderSummary
+- Creates a simplified view showing order info, customer name, and total amount.
+
+13. SELECT * FROM OrderSummary
+- Displays summarized order info for testing.
+
+14. SELECT * FROM Products WHERE ProductID = 2
+- Checks Product stock after placing order.
+
+15. SELECT * FROM OrderLogs
+- Displays logged order changes.
+
+16. INSERT INTO OrderDetails (negative quantity)
+- Test case to check Quantity constraint; should fail as negative quantities are not allowed.
+
